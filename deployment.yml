@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: css-dev-deployment
+  namespace: css
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cssdev
+  template:
+    metadata:
+      labels:
+        app: cssdev
+    spec:
+      containers:
+        - name: cssdev
+          image: 783297099843.dkr.ecr.us-east-2.amazonaws.com/customer-self-service:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ENV
+              value:  cssdev

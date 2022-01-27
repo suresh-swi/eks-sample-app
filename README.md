@@ -1,3 +1,2 @@
 # eks-sample-app
-
-Demo EKS Sample App
+Sample Java App with configuration to deploy to EKS
