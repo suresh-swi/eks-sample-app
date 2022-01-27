@@ -7,15 +7,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: cssdev
+      app: eks-sample
   template:
     metadata:
       labels:
-        app: cssdev
+        app: eks-sample
     spec:
       containers:
-        - name: cssdev
-          image: 783297099843.dkr.ecr.us-east-2.amazonaws.com/customer-self-service:latest
+        - name: eks-sample
+          image: 783297099843.dkr.ecr.us-east-2.amazonaws.com/eks-samples:latest
           ports:
             - containerPort: 8080
           env:
