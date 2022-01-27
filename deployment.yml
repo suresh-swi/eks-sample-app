@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: eks-sample
-          image: 783297099843.dkr.ecr.us-east-2.amazonaws.com/eks-samples:v1
+          image: 783297099843.dkr.ecr.us-east-2.amazonaws.com/eks-samples:latest
           ports:
             - containerPort: 8080
           env:
