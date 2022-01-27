@@ -8,6 +8,6 @@ public class EksSampleController {
 
     @GetMapping("/test")
     public String testEndpoint() {
-        return "Hello from the server, this was deployed using code build and this is V3 Version";
+        return "Hello from the server, this was deployed using code build and this is V4 Version";
     }
 }
