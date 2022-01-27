@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: css-dev-deployment
+  name: eks-sample-deployment
   namespace: css
 spec:
   replicas: 1

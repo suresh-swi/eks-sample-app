@@ -12,8 +12,8 @@ phases:
   build:
     commands:
       - mvn clean install
-      - docker build --tag $REPOSITORY_URI:$TAG .
-      - docker push $REPOSITORY_URI:$TAG
+      - docker build --tag $REPOSITORY_URI:latest .
+      - docker push $REPOSITORY_URI:latest
 
   post_build:
     commands:
