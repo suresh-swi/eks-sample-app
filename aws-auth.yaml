@@ -1,0 +1,35 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - rolearn: arn:aws:iam::783297099843:role/EksCodeBuildKubectlRole
+      username: build
+      groups:
+        - system:masters
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::783297099843:role/SWI-EKS-NodeGroup-EksNodeInstanceRole-1CHF0LXRMN96W
+      username: system:node:{{EC2PrivateDNSName}}
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2022-01-13T11:56:30Z
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data: {}
+    manager: vpcLambda
+    operation: Update
+    time: 2022-01-13T11:56:30Z
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:mapRoles: {}
+    manager: kubectl
+    operation: Update
+    time: 2022-01-27T03:30:50Z
+  name: aws-auth
+  namespace: kube-system
+  resourceVersion: "3279587"
+  uid: 95a98d38-b398-4394-b561-9695b50a0ab9
